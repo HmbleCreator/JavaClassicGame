@@ -1,0 +1,24 @@
+# Ignore large files and binaries
+*.exe
+*.apk
+*.jar
+*.zip
+*.rar
+*.7z
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE/Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node modules (if added later)
+node_modules/
+
+# Build outputs
+dist/
+build/
