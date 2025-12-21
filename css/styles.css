@@ -1,0 +1,835 @@
+/* ========================================
+   ROLLERCOASTER RUSH - STYLES
+   Modern, vibrant, mobile-first design
+   ======================================== */
+
+/* CSS Variables */
+:root {
+    /* Colors */
+    --bg-primary: #0a0a1a;
+    --bg-secondary: #12122a;
+    --bg-gradient: linear-gradient(135deg, #0a0a1a 0%, #1a1a3e 50%, #0a0a1a 100%);
+    
+    --accent-cyan: #00ffff;
+    --accent-magenta: #ff00ff;
+    --accent-pink: #ff3366;
+    --accent-gold: #ffd700;
+    --accent-green: #00ff88;
+    
+    --text-primary: #ffffff;
+    --text-secondary: rgba(255, 255, 255, 0.7);
+    --text-muted: rgba(255, 255, 255, 0.4);
+    
+    /* Track Colors */
+    --track-rail: #c0c0c0;
+    --track-glow: rgba(0, 255, 255, 0.5);
+    --track-support: #404060;
+    
+    /* UI */
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    
+    /* Spacing */
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+    --spacing-xxl: 48px;
+    
+    /* Typography */
+    --font-primary: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-size-xs: 12px;
+    --font-size-sm: 14px;
+    --font-size-md: 16px;
+    --font-size-lg: 20px;
+    --font-size-xl: 28px;
+    --font-size-xxl: 48px;
+    --font-size-title: 72px;
+    
+    /* Animation */
+    --transition-fast: 0.15s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.5s ease;
+}
+
+/* Reset */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: var(--font-primary);
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+/* Game Container */
+#game-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-gradient);
+    overflow: hidden;
+}
+
+/* Canvas */
+#gameCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* ========================================
+   SCREENS
+   ======================================== */
+
+.screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    background: rgba(10, 10, 26, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.screen.active {
+    display: flex;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* ========================================
+   MAIN MENU
+   ======================================== */
+
+.menu-content {
+    text-align: center;
+    padding: var(--spacing-xl);
+}
+
+.game-title {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: var(--spacing-xxl);
+    line-height: 1;
+}
+
+.title-roller {
+    font-size: clamp(36px, 10vw, 72px);
+    font-weight: 900;
+    color: var(--accent-cyan);
+    text-shadow: 
+        0 0 20px rgba(0, 255, 255, 0.5),
+        0 0 40px rgba(0, 255, 255, 0.3);
+    letter-spacing: 8px;
+    animation: glowPulse 2s ease-in-out infinite;
+}
+
+.title-coaster {
+    font-size: clamp(28px, 8vw, 56px);
+    font-weight: 700;
+    color: var(--accent-magenta);
+    text-shadow: 
+        0 0 20px rgba(255, 0, 255, 0.5),
+        0 0 40px rgba(255, 0, 255, 0.3);
+    letter-spacing: 12px;
+    animation: glowPulse 2s ease-in-out infinite 0.3s;
+}
+
+.title-rush {
+    font-size: clamp(48px, 14vw, 96px);
+    font-weight: 900;
+    background: linear-gradient(135deg, var(--accent-pink), var(--accent-gold));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: none;
+    filter: drop-shadow(0 0 30px rgba(255, 51, 102, 0.5));
+    letter-spacing: 4px;
+    animation: titlePop 0.5s ease-out;
+}
+
+@keyframes glowPulse {
+    0%, 100% { filter: brightness(1); }
+    50% { filter: brightness(1.2); }
+}
+
+@keyframes titlePop {
+    0% { transform: scale(0.8); opacity: 0; }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* Menu Buttons */
+.menu-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
+}
+
+/* ========================================
+   BUTTONS
+   ======================================== */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-md) var(--spacing-xl);
+    font-family: var(--font-primary);
+    font-size: var(--font-size-lg);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.btn:hover::before {
+    left: 100%;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--accent-pink), var(--accent-magenta));
+    color: white;
+    box-shadow: 
+        0 4px 20px rgba(255, 51, 102, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 
+        0 8px 30px rgba(255, 51, 102, 0.6),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.btn-primary:active {
+    transform: translateY(0) scale(0.98);
+}
+
+.btn-secondary {
+    background: var(--glass-bg);
+    color: var(--text-primary);
+    border: 2px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--accent-cyan);
+    transform: translateY(-2px);
+}
+
+.btn-back {
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    font-size: var(--font-size-xl);
+    border-radius: 50%;
+}
+
+.btn-icon {
+    font-size: var(--font-size-xl);
+}
+
+/* Pause Button */
+.btn-pause {
+    position: absolute;
+    top: var(--spacing-md);
+    right: var(--spacing-md);
+    width: 48px;
+    height: 48px;
+    font-size: var(--font-size-lg);
+    background: var(--glass-bg);
+    border: 2px solid var(--glass-border);
+    border-radius: 50%;
+    color: var(--text-primary);
+    cursor: pointer;
+    z-index: 20;
+    transition: all var(--transition-fast);
+}
+
+.btn-pause:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: scale(1.1);
+}
+
+.btn-pause.hidden {
+    display: none;
+}
+
+/* Stats Preview */
+.stats-preview {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-xl);
+}
+
+.stat {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    font-size: var(--font-size-lg);
+    color: var(--text-secondary);
+}
+
+.stat-icon {
+    font-size: var(--font-size-xl);
+}
+
+/* ========================================
+   TRACK SELECTION
+   ======================================== */
+
+.screen-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md);
+    background: linear-gradient(180deg, rgba(10, 10, 26, 0.9) 0%, transparent 100%);
+    z-index: 5;
+}
+
+.screen-header h2 {
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: var(--accent-cyan);
+}
+
+.track-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--spacing-md);
+    padding: 80px var(--spacing-md) var(--spacing-md);
+    width: 100%;
+    max-height: 100%;
+    overflow-y: auto;
+}
+
+.track-card {
+    background: var(--glass-bg);
+    border: 2px solid var(--glass-border);
+    border-radius: 16px;
+    padding: var(--spacing-lg);
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    position: relative;
+    overflow: hidden;
+}
+
+.track-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent-cyan), var(--accent-magenta));
+    opacity: 0;
+    transition: opacity var(--transition-normal);
+}
+
+.track-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent-cyan);
+    box-shadow: 0 8px 30px rgba(0, 255, 255, 0.2);
+}
+
+.track-card:hover::before {
+    opacity: 1;
+}
+
+.track-card.locked {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.track-card.locked:hover {
+    transform: none;
+    border-color: var(--glass-border);
+    box-shadow: none;
+}
+
+.track-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--spacing-sm);
+}
+
+.track-number {
+    font-size: var(--font-size-sm);
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.track-difficulty {
+    font-size: var(--font-size-xs);
+    padding: 4px 8px;
+    border-radius: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.track-difficulty.easy {
+    background: rgba(0, 255, 136, 0.2);
+    color: var(--accent-green);
+}
+
+.track-difficulty.medium {
+    background: rgba(255, 215, 0, 0.2);
+    color: var(--accent-gold);
+}
+
+.track-difficulty.hard {
+    background: rgba(255, 51, 102, 0.2);
+    color: var(--accent-pink);
+}
+
+.track-name {
+    font-size: var(--font-size-lg);
+    font-weight: 700;
+    margin-bottom: var(--spacing-sm);
+}
+
+.track-stars {
+    display: flex;
+    gap: var(--spacing-xs);
+}
+
+.track-stars .star {
+    font-size: var(--font-size-lg);
+    color: var(--text-muted);
+}
+
+.track-stars .star.earned {
+    color: var(--accent-gold);
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+/* ========================================
+   GAME HUD
+   ======================================== */
+
+.hud {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 15;
+}
+
+.hud.hidden {
+    display: none;
+}
+
+.hud-top {
+    position: absolute;
+    top: var(--spacing-md);
+    left: var(--spacing-md);
+    right: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.hud-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 30px;
+    padding: var(--spacing-sm) var(--spacing-md);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.hud-icon {
+    font-size: var(--font-size-lg);
+}
+
+/* Happiness Meter */
+.happiness-meter {
+    flex: 1;
+    max-width: 200px;
+}
+
+.meter-bar {
+    width: 80px;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.meter-fill {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(90deg, var(--accent-green), var(--accent-cyan));
+    border-radius: 4px;
+    transition: width var(--transition-fast), background var(--transition-fast);
+}
+
+.meter-fill.warning {
+    background: linear-gradient(90deg, var(--accent-gold), orange);
+}
+
+.meter-fill.danger {
+    background: linear-gradient(90deg, var(--accent-pink), red);
+}
+
+/* Speed Display */
+.speed-display {
+    font-weight: 700;
+}
+
+#speed-value {
+    font-size: var(--font-size-xl);
+    color: var(--accent-cyan);
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+.speed-unit {
+    font-size: var(--font-size-xs);
+    color: var(--text-muted);
+    margin-left: 2px;
+}
+
+/* Coin Display */
+.coin-display {
+    min-width: 80px;
+}
+
+#coins-collected {
+    font-size: var(--font-size-lg);
+    font-weight: 700;
+    color: var(--accent-gold);
+}
+
+/* Control Zones */
+.hud-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    height: 120px;
+    pointer-events: auto;
+}
+
+.control-zone {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-xs);
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--text-muted);
+    transition: all var(--transition-fast);
+    cursor: pointer;
+}
+
+.control-icon {
+    font-size: 32px;
+    opacity: 0.5;
+    transition: all var(--transition-fast);
+}
+
+.control-zone:active,
+.control-zone.active {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.brake-zone:active .control-icon,
+.brake-zone.active .control-icon {
+    opacity: 1;
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 10px var(--accent-pink));
+}
+
+.boost-zone:active .control-icon,
+.boost-zone.active .control-icon {
+    opacity: 1;
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 10px var(--accent-cyan));
+}
+
+/* ========================================
+   PAUSE MENU
+   ======================================== */
+
+.pause-content {
+    text-align: center;
+}
+
+.pause-content h2 {
+    font-size: var(--font-size-xxl);
+    margin-bottom: var(--spacing-xl);
+    color: var(--accent-cyan);
+    text-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+}
+
+.pause-content .btn {
+    display: block;
+    width: 200px;
+    margin: var(--spacing-md) auto;
+}
+
+/* ========================================
+   RESULTS SCREEN
+   ======================================== */
+
+.results-content {
+    text-align: center;
+    padding: var(--spacing-xl);
+}
+
+#results-title {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-lg);
+    color: var(--accent-green);
+    text-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
+}
+
+#results-title.failed {
+    color: var(--accent-pink);
+    text-shadow: 0 0 20px rgba(255, 51, 102, 0.5);
+}
+
+.stars-display {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
+}
+
+.stars-display .star {
+    font-size: 48px;
+    color: var(--text-muted);
+    transition: all 0.5s ease;
+}
+
+.stars-display .star.earned {
+    color: var(--accent-gold);
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
+    animation: starPop 0.5s ease;
+}
+
+@keyframes starPop {
+    0% { transform: scale(0); }
+    50% { transform: scale(1.3); }
+    100% { transform: scale(1); }
+}
+
+.results-stats {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    padding: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+}
+
+.result-item {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--spacing-sm) 0;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.result-item:last-child {
+    border-bottom: none;
+}
+
+.result-label {
+    color: var(--text-secondary);
+}
+
+.result-value {
+    font-weight: 700;
+    color: var(--accent-cyan);
+}
+
+.results-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--spacing-md);
+}
+
+.results-buttons .btn {
+    min-width: 120px;
+}
+
+/* ========================================
+   LOADING SCREEN
+   ======================================== */
+
+.loading-content {
+    text-align: center;
+}
+
+.loading-spinner {
+    width: 60px;
+    height: 60px;
+    border: 4px solid var(--glass-border);
+    border-top-color: var(--accent-cyan);
+    border-radius: 50%;
+    margin: 0 auto var(--spacing-lg);
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* ========================================
+   SCROLLBAR
+   ======================================== */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--glass-border);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+
+@media (max-width: 480px) {
+    .game-title {
+        margin-bottom: var(--spacing-xl);
+    }
+    
+    .title-roller {
+        letter-spacing: 4px;
+    }
+    
+    .title-coaster {
+        letter-spacing: 6px;
+    }
+    
+    .btn {
+        padding: var(--spacing-md) var(--spacing-lg);
+        font-size: var(--font-size-md);
+    }
+    
+    .hud-top {
+        flex-wrap: wrap;
+        gap: var(--spacing-sm);
+    }
+    
+    .hud-item {
+        padding: var(--spacing-xs) var(--spacing-sm);
+    }
+    
+    .happiness-meter {
+        order: 3;
+        max-width: none;
+        width: 100%;
+    }
+    
+    .meter-bar {
+        flex: 1;
+    }
+}
+
+/* ========================================
+   ANIMATIONS
+   ======================================== */
+
+/* Coin collect animation */
+@keyframes coinCollect {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.5); opacity: 0.5; }
+    100% { transform: scale(0) translateY(-50px); opacity: 0; }
+}
+
+/* Shake animation for warnings */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+.shake {
+    animation: shake 0.3s ease;
+}
+
+/* Pulse animation */
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+.pulse {
+    animation: pulse 0.5s ease;
+}

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
+    <meta name="description" content="Rollercoaster Rush - A thrilling physics-based rollercoaster game">
+    <meta name="theme-color" content="#0a0a1a">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <title>Rollercoaster Rush</title>
+    
+    <link rel="manifest" href="manifest.json">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div id="game-container">
+        <!-- Main Canvas -->
+        <canvas id="gameCanvas"></canvas>
+        
+        <!-- Main Menu Overlay -->
+        <div id="menu-screen" class="screen active">
+            <div class="menu-content">
+                <h1 class="game-title">
+                    <span class="title-roller">ROLLER</span>
+                    <span class="title-coaster">COASTER</span>
+                    <span class="title-rush">RUSH</span>
+                </h1>
+                <div class="menu-buttons">
+                    <button id="btn-play" class="btn btn-primary">
+                        <span class="btn-icon">▶</span>
+                        PLAY
+                    </button>
+                    <button id="btn-tracks" class="btn btn-secondary">
+                        <span class="btn-icon">🎢</span>
+                        SELECT TRACK
+                    </button>
+                </div>
+                <div class="stats-preview">
+                    <div class="stat">
+                        <span class="stat-icon">⭐</span>
+                        <span id="total-stars">0</span> / <span id="max-stars">60</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-icon">🪙</span>
+                        <span id="total-coins">0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Track Selection Screen -->
+        <div id="track-screen" class="screen">
+            <div class="screen-header">
+                <button id="btn-back-menu" class="btn btn-back">←</button>
+                <h2>SELECT TRACK</h2>
+            </div>
+            <div id="track-list" class="track-list">
+                <!-- Tracks populated by JS -->
+            </div>
+        </div>
+        
+        <!-- Game HUD -->
+        <div id="game-hud" class="hud hidden">
+            <div class="hud-top">
+                <div class="hud-item happiness-meter">
+                    <span class="hud-icon">😊</span>
+                    <div class="meter-bar">
+                        <div id="happiness-fill" class="meter-fill"></div>
+                    </div>
+                    <span id="happiness-value">100%</span>
+                </div>
+                <div class="hud-item speed-display">
+                    <span id="speed-value">0</span>
+                    <span class="speed-unit">km/h</span>
+                </div>
+                <div class="hud-item coin-display">
+                    <span class="hud-icon">🪙</span>
+                    <span id="coins-collected">0</span>
+                </div>
+            </div>
+            <div class="hud-bottom">
+                <div id="control-brake" class="control-zone brake-zone">
+                    <span class="control-icon">🛑</span>
+                    <span>BRAKE</span>
+                </div>
+                <div id="control-boost" class="control-zone boost-zone">
+                    <span class="control-icon">🚀</span>
+                    <span>BOOST</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Pause Button -->
+        <button id="btn-pause" class="btn-pause hidden">⏸️</button>
+        
+        <!-- Pause Menu -->
+        <div id="pause-screen" class="screen">
+            <div class="pause-content">
+                <h2>PAUSED</h2>
+                <button id="btn-resume" class="btn btn-primary">RESUME</button>
+                <button id="btn-restart" class="btn btn-secondary">RESTART</button>
+                <button id="btn-quit" class="btn btn-secondary">QUIT</button>
+            </div>
+        </div>
+        
+        <!-- Results Screen -->
+        <div id="results-screen" class="screen">
+            <div class="results-content">
+                <h2 id="results-title">TRACK COMPLETE!</h2>
+                <div id="stars-display" class="stars-display">
+                    <span class="star">☆</span>
+                    <span class="star">☆</span>
+                    <span class="star">☆</span>
+                </div>
+                <div class="results-stats">
+                    <div class="result-item">
+                        <span class="result-label">Happiness</span>
+                        <span id="result-happiness" class="result-value">100%</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-label">Coins</span>
+                        <span id="result-coins" class="result-value">0 / 0</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-label">Time</span>
+                        <span id="result-time" class="result-value">0:00</span>
+                    </div>
+                </div>
+                <div class="results-buttons">
+                    <button id="btn-retry" class="btn btn-secondary">RETRY</button>
+                    <button id="btn-next" class="btn btn-primary">NEXT TRACK</button>
+                    <button id="btn-menu" class="btn btn-secondary">MENU</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Loading Screen -->
+        <div id="loading-screen" class="screen">
+            <div class="loading-content">
+                <div class="loading-spinner"></div>
+                <p>Loading...</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Game Scripts -->
+    <script src="js/engine/physics.js"></script>
+    <script src="js/engine/renderer.js"></script>
+    <script src="js/engine/input.js"></script>
+    <script src="js/game/track.js"></script>
+    <script src="js/game/coaster.js"></script>
+    <script src="js/game/passenger.js"></script>
+    <script src="js/game/coin.js"></script>
+    <script src="js/data/tracks.js"></script>
+    <script src="js/states/menu.js"></script>
+    <script src="js/states/playing.js"></script>
+    <script src="js/states/results.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
