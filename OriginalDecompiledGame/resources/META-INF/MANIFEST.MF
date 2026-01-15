@@ -1,0 +1,333 @@
+Manifest-Version: 1.0
+Created-By: 1.5.0 (Sun Microsystems Inc.)
+
+Name: assets/r65
+SHA1-Digest: sbEBnd35Po4R/zE+dY/WXtDpC0c=
+
+Name: assets/r92
+SHA1-Digest: NeHVcSexrfole5o8p93OSdyBOII=
+
+Name: assets/r81
+SHA1-Digest: rdFIzBPHfH3ydmyaCUkYzC+O+Pk=
+
+Name: assets/r70
+SHA1-Digest: jvpkCPMDdXwvPiuMveJBldKphsQ=
+
+Name: assets/r86
+SHA1-Digest: SgHMCSywDIj0M/H8Wq9VZRErAhQ=
+
+Name: assets/r64
+SHA1-Digest: VXHXdPLlZB0yeTiFwx8kr/JuF5U=
+
+Name: assets/r43
+SHA1-Digest: Vr9s9MbxeFFJZ7NvjcL7ZS95H58=
+
+Name: assets/r5
+SHA1-Digest: Pa7Fvr0P6pW0aY33ttGskzOVvA0=
+
+Name: assets/r71
+SHA1-Digest: 3v05ECcaM0sDP+EO+cQBDCIkFMI=
+
+Name: assets/r82
+SHA1-Digest: ++S/f4FDskbWk8+7PvWdL5N84KA=
+
+Name: assets/r93
+SHA1-Digest: asdOpPIhHKDbXB0GovtqovMiMMw=
+
+Name: assets/r60
+SHA1-Digest: MDya8qHlpn6sGT+zhMzhvdBPkYU=
+
+Name: assets/r44
+SHA1-Digest: IqwncfdiUaSoBNHCYt8S9QlVdWo=
+
+Name: classes.dex
+SHA1-Digest: i+WcMMvMtVbERKMBkNLb/tnvMJ0=
+
+Name: assets/r66
+SHA1-Digest: lpF72F1kS1jqB7C0xTgGsoKa79k=
+
+Name: assets/r62
+SHA1-Digest: SzB2TBkGQCCXBi0rP+B/ORMyK2g=
+
+Name: assets/r29
+SHA1-Digest: Y63nJ3Zy8LRoM99/0PertidKjzY=
+
+Name: assets/r83
+SHA1-Digest: +NZVFaK39GY2fiC82XPtOz9X4WU=
+
+Name: assets/r45
+SHA1-Digest: AgSnhefr8aeHAH2K7swDoR+Q2pc=
+
+Name: assets/r61
+SHA1-Digest: 9zrsJNPdIdtTWFcNuwTAP84mohQ=
+
+Name: assets/r2
+SHA1-Digest: Wa1uWiiGR8QzzgFtwGMlUuvrxJ4=
+
+Name: assets/r68
+SHA1-Digest: qvw3b8yHh23/qxIXRkNihTNK79E=
+
+Name: assets/r20
+SHA1-Digest: fqy7OGKkrU4fqYe7zwA/b8H3jdE=
+
+Name: resources.arsc
+SHA1-Digest: gtw/dolw97ASLPmmYW3LGea7oM8=
+
+Name: assets/r32
+SHA1-Digest: JqWI/TlJc2JmeSOJCCJAoDu7pTY=
+
+Name: assets/r78
+SHA1-Digest: bTAeTnlnJISpAOzpYHGtk0011hc=
+
+Name: assets/r15
+SHA1-Digest: VbCgOE/7ybskYbbXa99V9WtDlYQ=
+
+Name: assets/r85
+SHA1-Digest: f9/zj7QCMN8B0788sjSv7qn4Wuc=
+
+Name: assets/l2_0
+SHA1-Digest: dR+SVb56G8KVnTX7QvgjvSa8myY=
+
+Name: assets/r1
+SHA1-Digest: dS2P8xfqeDG1AgEVSzOJAh9a3Xc=
+
+Name: assets/r98
+SHA1-Digest: 4Km37TPlZBysH4YCLPY0ZMAGYUA=
+
+Name: assets/r3
+SHA1-Digest: CPLDd+nMNTX+MYJTDxLQuvgzccU=
+
+Name: assets/r80
+SHA1-Digest: i8scZYteov5sgmo7Gbg/I60D4H8=
+
+Name: assets/r79
+SHA1-Digest: euXrj/lIRi9n6g6+5KdRnsx+Um4=
+
+Name: res/drawable-ldpi/i1.png
+SHA1-Digest: gZexf9CFgXgbgnhYiOcF6Ik1x8U=
+
+Name: assets/r46
+SHA1-Digest: fXVylICav8Ndk8oAjqL8QYRrhQ0=
+
+Name: assets/r31
+SHA1-Digest: K2xOMl7QrP6FF5sk/jvlXFJKtp8=
+
+Name: assets/r4
+SHA1-Digest: uN2zaqA78v/CZaVWT+ZDsSsmshA=
+
+Name: assets/r33
+SHA1-Digest: quvLJVdykfvhgIJ91HXFsXg2NxY=
+
+Name: assets/r14
+SHA1-Digest: iyp1etNg1TgYT7HNSln1srCmlFY=
+
+Name: assets/r19
+SHA1-Digest: +tRDe/b+l5KsXhdQ2gjxpofDZIU=
+
+Name: assets/r73
+SHA1-Digest: bp7YJzRU3jlXpo5vM+m+y1e2r7s=
+
+Name: assets/r40
+SHA1-Digest: eUgSkdtXZB4E551dGAhObIPOUNo=
+
+Name: assets/l5_0
+SHA1-Digest: CvB4Ech+bcR3xBky+mrY72/jIzA=
+
+Name: assets/r41
+SHA1-Digest: PiolnPWDfWO4lYyRxLTNzHWSSmo=
+
+Name: assets/r91
+SHA1-Digest: o7w91vfQeofO8BkKCg6P++fuYnk=
+
+Name: assets/r52
+SHA1-Digest: vm6LK+FG9rJ/MG6N8z1tJeWn4w8=
+
+Name: assets/r42
+SHA1-Digest: HZYP22rShyJIlU3QbhwJJ9LacWM=
+
+Name: assets/l6_0
+SHA1-Digest: qZSa4RHki/l5Rqhq3I9wG08zuNs=
+
+Name: assets/r53
+SHA1-Digest: X/6TFw6sYupRDRTuygxQJSeLdCc=
+
+Name: assets/r63
+SHA1-Digest: ba47ZeZU/gjRu95+p4YQAo+wD/A=
+
+Name: assets/r6
+SHA1-Digest: 4Km37TPlZBysH4YCLPY0ZMAGYUA=
+
+Name: assets/r54
+SHA1-Digest: wk1VED4QUOjHvlByq5wBAEy9eIE=
+
+Name: assets/r90
+SHA1-Digest: Llq18DBgf2qC3lASTWiHDzsE6s0=
+
+Name: assets/r18
+SHA1-Digest: AqwPG5WDiNaTxcZbnS5YwYrrRak=
+
+Name: assets/r76
+SHA1-Digest: U9+LFVSkZUfZ9nKH5gPmGOtxyko=
+
+Name: assets/r51
+SHA1-Digest: ZJgYoF50vf1q4NyAcFcpY/EEl8I=
+
+Name: AndroidManifest.xml
+SHA1-Digest: Ptx07eoXlQYL7w/Np1ww0yHATMc=
+
+Name: assets/r49
+SHA1-Digest: yps5d78GBP1RgSghC0I+fdCbRA4=
+
+Name: assets/r27
+SHA1-Digest: ncvWymtSYF3MmI6QZdChnSA011s=
+
+Name: assets/r74
+SHA1-Digest: Az/OxOEgT/3yt+DIUZ1tRZ2Zg1Y=
+
+Name: assets/r96
+SHA1-Digest: eUON8XC4w7ZmHl6Ssn3FnPQDDBo=
+
+Name: assets/r7
+SHA1-Digest: J2YcbeVBFGW4Kow16zdAddPoZZE=
+
+Name: assets/r36
+SHA1-Digest: s7OMWv55Ck0jmUZTBmx3S0XxXTU=
+
+Name: assets/r77
+SHA1-Digest: SXVyMEtZEF3pY9/v71fNCbmIO/0=
+
+Name: assets/r50
+SHA1-Digest: PxD3ZJOaX2PMfySaW8oLuM9X1G8=
+
+Name: assets/r11
+SHA1-Digest: wODNVF6yzyY5ZWJy/5eTDLKCZZQ=
+
+Name: assets/l0_0
+SHA1-Digest: EZclXac86CE0AaTldYM96ltwwNo=
+
+Name: assets/r95
+SHA1-Digest: 1SbIcDx9d9WS/DZz2wt7wGD7QfY=
+
+Name: assets/r34
+SHA1-Digest: Cx+pDZoTrkK5O5fNc5TEJeUjIbs=
+
+Name: assets/r72
+SHA1-Digest: QZ4RrnzNUiqabXmp0Kn0zR8PaKc=
+
+Name: assets/p
+SHA1-Digest: 3CxT1KYvD4K6aOqi+ct8zERwG5s=
+
+Name: assets/r94
+SHA1-Digest: UEVmPxxrIqe4D49JAK0S+gBjtcc=
+
+Name: assets/r30
+SHA1-Digest: bJaaN03p6S3tOfVoO4zTLNUHfXA=
+
+Name: assets/r75
+SHA1-Digest: 8AIjCqGtYIFxJvvWwofCnrdHYyc=
+
+Name: assets/r35
+SHA1-Digest: xz5h2qw/LXBwi0rOduJPX/HFJd0=
+
+Name: assets/r26
+SHA1-Digest: aoebJjwngcli3x2QjID5VrW8Llc=
+
+Name: assets/r37
+SHA1-Digest: RfhYQhDg9XI0pRrDrrg2eux1c9E=
+
+Name: assets/r48
+SHA1-Digest: ZZcwuU+E1WjOdZjr/Gy1BLzX5Y8=
+
+Name: assets/r10
+SHA1-Digest: /qLAmJ1Icbdfcfxa6AJQwuYohMk=
+
+Name: assets/r59
+SHA1-Digest: foiOeoAYJwQP2kM+7sE9W6XqlCo=
+
+Name: assets/r25
+SHA1-Digest: Bimw6vRDJ0biRvoab3kE4rPWBwA=
+
+Name: assets/r47
+SHA1-Digest: +T4GTaN8HmBO3KQVG+4KGjmz0m4=
+
+Name: assets/r17
+SHA1-Digest: ZahT3ih8EB0Hmjf0fh6pwEmr77k=
+
+Name: assets/r87
+SHA1-Digest: yBGz4ggGJQajiLd5GLJnu6MF3BY=
+
+Name: assets/r39
+SHA1-Digest: XlRbDgc4QcsvjYgU1y9ncwhQH3Q=
+
+Name: assets/r16
+SHA1-Digest: SxVNgbCPOzE0Y1hLsEhUzJyZ7FU=
+
+Name: assets/r38
+SHA1-Digest: 548bOzY0Z1PpzcgNTpUA5dnah2M=
+
+Name: assets/r57
+SHA1-Digest: Eoi6wP+CD+hXIve1TFL+vvB4jBc=
+
+Name: assets/r9
+SHA1-Digest: iKekA88D352hIflXAVKLR6qEhy8=
+
+Name: assets/l4_0
+SHA1-Digest: 5HHNP/BY4XNnI6qPdIQgQZoBvAI=
+
+Name: assets/r24
+SHA1-Digest: ftun+RI03ugS9/Jp4a85/2Of9O8=
+
+Name: assets/r69
+SHA1-Digest: xI3hBTx93u23BlYBZTHjIkEYePY=
+
+Name: assets/r58
+SHA1-Digest: rOobiKwL27S0cKs758DhD0PMm74=
+
+Name: assets/r89
+SHA1-Digest: CyxeF8fNe7T7UKqoD940W0o2lkc=
+
+Name: assets/r67
+SHA1-Digest: T64SFpdz02GR60jIg9T1tOWNV24=
+
+Name: assets/r21
+SHA1-Digest: PjKgq/mOv/HoTRN3RXSCg3vOPgo=
+
+Name: assets/r55
+SHA1-Digest: CeaYUlaYh76XD8NvtpBJEBqlU8k=
+
+Name: assets/r84
+SHA1-Digest: BkwvgAYtneH867ZYXqpB8/n94ms=
+
+Name: assets/r22
+SHA1-Digest: KEJ/vqG8v0INbvGMhEdN1C9+Yo4=
+
+Name: assets/r88
+SHA1-Digest: pQZ8KKSWttc0+Er0sTxl35ozA18=
+
+Name: assets/r28
+SHA1-Digest: RHVM+5aWEC2yy9mupvINJo0nCFQ=
+
+Name: assets/r12
+SHA1-Digest: IG1JKi2TorvsPMNC7UgFYDOq2CU=
+
+Name: assets/r23
+SHA1-Digest: wjEXonZ/VgM3SdqEh/vL/bWXYT4=
+
+Name: assets/r97
+SHA1-Digest: wfjXKR4r6930sBPj1t9d7ofccjI=
+
+Name: assets/r13
+SHA1-Digest: F4tLccPYkFLiawVaOiDECj+vI+8=
+
+Name: assets/l3_0
+SHA1-Digest: XFrzT/F4Pz8BM6ZBT/5ILUnpK/U=
+
+Name: assets/r56
+SHA1-Digest: TXdBm0+XWAogW3p8/z0gsrSYYg8=
+
+Name: assets/r8
+SHA1-Digest: bVvgzx3nYoFRgik+hDNxqKiuQDk=
+
+Name: assets/l1_0
+SHA1-Digest: M/CvroCBdAHRDA3zMigccpdU1GA=
+

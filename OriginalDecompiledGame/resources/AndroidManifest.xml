@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    android:versionCode="1137"
+    android:versionName="1.1.37"
+    package="com.digitalchocolate.androidrollergapp">
+    <supports-screens
+        android:anyDensity="true"
+        android:smallScreens="true"
+        android:normalScreens="true"
+        android:largeScreens="false"/>
+    <uses-sdk
+        android:minSdkVersion="1"
+        android:targetSdkVersion="1"
+        android:maxSdkVersion="7"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <application
+        android:label="Roller Coaster"
+        android:icon="@drawable/i1">
+        <activity
+            android:label="Roller Coaster"
+            android:name="com.digitalchocolate.androidrollergapp.DCRoller"
+            android:screenOrientation="landscape"
+            android:configChanges="orientation|keyboardHidden|keyboard">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

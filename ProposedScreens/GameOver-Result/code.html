@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Game Over - Roller Coaster Revolution</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee8c2b",
+                        "primary-dark": "#d97719",
+                        "background-light": "#fdfbf7",
+                        "background-dark": "#221910",
+                        "retro-black": "#1a1a1a",
+                        "retro-gray": "#e5e5e5",
+                    },
+                    fontFamily: {
+                        "pixel": ['"Press Start 2P"', 'cursive'],
+                        "mono": ['"VT323"', 'monospace'],
+                    },
+                    boxShadow: {
+                        "pixel": "4px 4px 0 0 rgba(0,0,0,1)",
+                        "pixel-sm": "2px 2px 0 0 rgba(0,0,0,1)",
+                        "pixel-inset": "inset 2px 2px 0 0 rgba(0,0,0,0.1)",
+                    },
+                },
+            },
+        }
+    </script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&amp;family=VT323&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }@keyframes pop-in-pixel {
+            0% { transform: scale(0); opacity: 0; }
+            50% { transform: scale(1.1); opacity: 1; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        .animate-star-1 { animation: pop-in-pixel 0.4s steps(4) 0.2s forwards; opacity: 0; }
+        .animate-star-2 { animation: pop-in-pixel 0.4s steps(4) 0.4s forwards; opacity: 0; }
+        .animate-star-3 { animation: pop-in-pixel 0.4s steps(4) 0.6s forwards; opacity: 0; }img, div[style*="background-image"] {
+            image-rendering: pixelated;
+        }
+    </style>
+<style>
+        body {
+          min-height: max(884px, 100dvh);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-stone-200 dark:bg-stone-900 font-mono text-retro-black dark:text-stone-50 overflow-x-hidden antialiased">
+<div class="relative flex h-full min-h-screen w-full flex-col max-w-md mx-auto shadow-2xl bg-background-light dark:bg-background-dark border-x-4 border-retro-black">
+<header class="flex items-center justify-between px-6 pt-8 pb-4 border-b-4 border-retro-black bg-white dark:bg-stone-800">
+<button class="flex items-center justify-center w-10 h-10 bg-white dark:bg-stone-700 border-2 border-retro-black shadow-pixel-sm active:shadow-none active:translate-x-[2px] active:translate-y-[2px] transition-none text-retro-black dark:text-white">
+<span class="material-symbols-outlined text-xl">settings</span>
+</button>
+<div class="px-4 py-2 bg-primary border-2 border-retro-black shadow-pixel-sm">
+<span class="text-[10px] font-pixel text-white tracking-widest uppercase">Level 12</span>
+</div>
+<button class="flex items-center justify-center w-10 h-10 bg-white dark:bg-stone-700 border-2 border-retro-black shadow-pixel-sm active:shadow-none active:translate-x-[2px] active:translate-y-[2px] transition-none text-retro-black dark:text-white">
+<span class="material-symbols-outlined text-xl">close</span>
+</button>
+</header>
+<main class="flex-1 overflow-y-auto pb-40 no-scrollbar">
+<div class="flex flex-col items-center px-4 pt-8 pb-6">
+<h1 class="text-primary tracking-tight text-xl font-pixel leading-tight text-center animate-pulse drop-shadow-[2px_2px_0_rgba(0,0,0,1)] uppercase mb-2">
+                    Level<br/>Cleared!
+                </h1>
+<div class="flex justify-center items-end gap-3 my-4 h-24">
+<div class="relative flex items-center justify-center w-16 h-16 animate-star-1">
+<span class="material-symbols-outlined text-[56px] text-yellow-400 drop-shadow-[3px_3px_0_rgba(0,0,0,1)] stroke-black">star</span>
+</div>
+<div class="relative flex items-center justify-center w-20 h-20 -mt-2 animate-star-2 pb-2">
+<span class="material-symbols-outlined text-[72px] text-yellow-400 drop-shadow-[4px_4px_0_rgba(0,0,0,1)]">star</span>
+</div>
+<div class="relative flex items-center justify-center w-16 h-16 animate-star-3">
+<span class="material-symbols-outlined text-[56px] text-stone-300 dark:text-stone-600 drop-shadow-[3px_3px_0_rgba(0,0,0,1)]">star</span>
+</div>
+</div>
+<div class="bg-white dark:bg-stone-800 border-4 border-retro-black p-4 w-full max-w-[280px] text-center shadow-pixel">
+<h2 class="text-retro-black dark:text-white text-5xl font-mono font-bold leading-none tracking-wide">
+                        12,450
+                    </h2>
+<p class="text-primary font-pixel text-[10px] mt-2 uppercase tracking-wide">New Personal Best!</p>
+</div>
+</div>
+<div class="grid grid-cols-3 gap-2 px-4 mb-8">
+<div class="flex flex-col gap-1 p-2 bg-white dark:bg-stone-800 border-2 border-retro-black shadow-pixel-sm items-center text-center">
+<span class="material-symbols-outlined text-primary text-2xl mb-1">timer</span>
+<p class="text-stone-500 dark:text-stone-400 text-[10px] font-pixel uppercase">Time</p>
+<p class="text-retro-black dark:text-white text-2xl font-bold font-mono leading-none">01:45</p>
+</div>
+<div class="flex flex-col gap-1 p-2 bg-white dark:bg-stone-800 border-2 border-retro-black shadow-pixel-sm items-center text-center">
+<span class="material-symbols-outlined text-primary text-2xl mb-1">speed</span>
+<p class="text-stone-500 dark:text-stone-400 text-[10px] font-pixel uppercase">Speed</p>
+<p class="text-retro-black dark:text-white text-2xl font-bold font-mono leading-none">120mph</p>
+</div>
+<div class="flex flex-col gap-1 p-2 bg-white dark:bg-stone-800 border-2 border-retro-black shadow-pixel-sm items-center text-center">
+<span class="material-symbols-outlined text-primary text-2xl mb-1">savings</span>
+<p class="text-stone-500 dark:text-stone-400 text-[10px] font-pixel uppercase">Reward</p>
+<p class="text-retro-black dark:text-white text-2xl font-bold font-mono leading-none">+50</p>
+</div>
+</div>
+<div class="px-4 mb-6">
+<div class="bg-stone-100 dark:bg-stone-800/50 border-2 border-retro-black p-1 shadow-pixel-sm">
+<p class="text-retro-black dark:text-white text-[10px] font-pixel mb-2 px-2 pt-1 uppercase text-center bg-white dark:bg-stone-700 border-b-2 border-retro-black pb-1">Highlights</p>
+<div class="flex w-full grow @container">
+<div class="w-full gap-1 overflow-hidden h-32 grid grid-cols-3">
+<div class="w-full h-full bg-center bg-no-repeat bg-cover bg-stone-200 dark:bg-stone-700 relative group col-span-2 border border-retro-black" data-alt="Action shot of roller coaster doing a loop de loop against blue sky" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAC7FJLHmihptc4Yd-RsY0Bx5B6Ao5EBjtud16Ch26-GD552JuAerjmd7TTw_Q3ENq5LGW3b5v3ZINpbQgJOeZTRNxe8evKaKbUG3QwNSFvRKMcm_oLsOyU4XcouERjxU0hXoCTpXQcGPIZuTk6KoOkm7CkAj21SJmLs1o5OoR7wNO3CN_pRr5D2dCHHr9veFw7N57RaqID4LLL9bAhKhuufFiiLPVEa0SlRRsZnwmUugl3Q5kvZIqYm2dk8-9VKbYYLlMx4smkcMk");'>
+<div class="absolute inset-0 bg-black/10"></div>
+</div>
+<div class="flex flex-col gap-1 h-full">
+<div class="w-full h-full bg-center bg-no-repeat bg-cover bg-stone-200 dark:bg-stone-700 border border-retro-black" data-alt="Close up of passengers cheering" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDI9cP9WpGPQIF4dHbtXYpbafmBUZvAzj7LXNT0sedm1kjYqHTHVrjyGgC6HLjGyp7OWcf3-GNnBce_pzgAjl9hQPsTOKtrMBffMePQjIhrE4p1sKan9t8mCia8nm3HCnA9NhqtifojFED44b8PSAbQafQgMYLk5EeXL5bwuq23-fVkSMDUxbGYx2z5GQb9AEBCVcS0b3bhaH2s2A6ElhByf6yQV4BRdOxfMpkkI25JVdrEFcs0Q4CgSyZkcFtHxoAC3itbI89BqXk");'></div>
+<div class="w-full h-full bg-center bg-no-repeat bg-cover bg-stone-200 dark:bg-stone-700 border border-retro-black" data-alt="View of the track from high up" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDOP1KN2v0rB1fMsVUZfhQephIR4j5nOanWPY8PMiHYXJQPFyTBhInEpj4gXoI3AbBWkSn47HN4eocpu4z_rVMo49J7GD4fNeCQAJkxER7kOdpgWQuhn-aafU6D4FiCuBWL3h2XZe4M-_MEkl1rI6ZUXz2q8T2HlpMEkSSkXVFnTYAtkdPkbbCdscJyc2n9P9QGkFi2w3Gf0wXgwE3VlPK3w5m8hOegoxeGjmu9BSX9K_Yqhibh9bKI1FOREXVkSRrYp3B6nLGghYQ");'></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="px-4 mb-4">
+<div class="bg-yellow-50 dark:bg-stone-800 border-2 border-retro-black p-2 flex items-center gap-3 shadow-pixel-sm">
+<div class="h-14 w-14 bg-center bg-cover border-2 border-retro-black shrink-0 bg-white" data-alt="Gold coins stacking up reward graphic" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuASbzATobKe7qUaK1o31AfE64l7pTZxs8d5SrZTXl8Fcp9NgQD1SkPf_FTddZbeJfJf2rzJbPlKeuJCkSeTsCcnzE3jS78kk5xG8SHKsBtidh2mUdBpjkhN20A4sw8nMOlY4QO84w-q7dqyhqDPyntUhPOEXa3BHqlRb6ieJUdNiGkCw3801xTj41OfMJXAjEiUTkf22hr5XwjCC7LZRL6QPCd6X1sfGvVyswPS_GxrebJJCcswB7rzNNS5p9DN7PyVgvWbvEkXZhQ");'></div>
+<div class="flex-1 py-1">
+<p class="text-retro-black dark:text-white text-xs font-pixel mb-1">Double Coins</p>
+<p class="text-stone-500 dark:text-stone-400 text-lg font-mono leading-none">Watch video for 2x</p>
+</div>
+<button class="flex shrink-0 cursor-pointer items-center justify-center h-10 px-3 bg-primary text-white border-2 border-retro-black shadow-[2px_2px_0_0_rgba(0,0,0,1)] active:shadow-none active:translate-x-[2px] active:translate-y-[2px] transition-none">
+<span class="material-symbols-outlined text-[18px] mr-1">play_circle</span>
+<span class="font-pixel text-[8px] uppercase">Watch</span>
+</button>
+</div>
+</div>
+<div class="h-6"></div>
+</main>
+<div class="absolute bottom-0 left-0 right-0 p-4 bg-stone-100 dark:bg-stone-900 border-t-4 border-retro-black">
+<div class="flex flex-col gap-3">
+<button class="w-full h-14 bg-primary hover:bg-primary-dark text-white flex items-center justify-center gap-3 border-4 border-retro-black shadow-pixel active:shadow-none active:translate-x-[4px] active:translate-y-[4px] transition-none group">
+<span class="font-pixel text-sm uppercase tracking-wider">Next Level</span>
+<span class="material-symbols-outlined group-hover:translate-x-1 transition-transform steps-2">arrow_forward</span>
+</button>
+<div class="grid grid-cols-2 gap-3">
+<button class="w-full h-12 bg-white dark:bg-stone-700 text-retro-black dark:text-white border-2 border-retro-black shadow-pixel-sm flex items-center justify-center gap-2 active:shadow-none active:translate-x-[2px] active:translate-y-[2px] transition-none hover:bg-stone-50">
+<span class="material-symbols-outlined text-lg">replay</span>
+<span class="font-pixel text-[10px] uppercase">Retry</span>
+</button>
+<button class="w-full h-12 bg-white dark:bg-stone-700 text-retro-black dark:text-white border-2 border-retro-black shadow-pixel-sm flex items-center justify-center gap-2 active:shadow-none active:translate-x-[2px] active:translate-y-[2px] transition-none hover:bg-stone-50">
+<span class="material-symbols-outlined text-lg">menu</span>
+<span class="font-pixel text-[10px] uppercase">Menu</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+
+</body></html>

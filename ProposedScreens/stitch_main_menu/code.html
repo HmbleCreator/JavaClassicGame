@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Roller Coaster Revolution 99 Tracks - Main Menu</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=VT323&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee8c2b",
+                        "primary-dark": "#b06213",
+                        "background-light": "#70a4b2","background-dark": "#221910",
+                        "pixel-border": "#4a3c31",
+                    },
+                    fontFamily: {
+                        "display": ["'VT323'", "monospace"]},
+                    borderRadius: {"none": "0", "DEFAULT": "0", "lg": "0", "xl": "0", "full": "0"},boxShadow: {
+                        "pixel": "4px 4px 0px 0px rgba(0,0,0,0.5)",
+                        "pixel-active": "2px 2px 0px 0px rgba(0,0,0,0.5) inset",
+                        "pixel-sm": "2px 2px 0px 0px rgba(0,0,0,0.3)",
+                    }
+                },
+            },
+        }
+    </script>
+<style>.no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }.pixelated-bg {
+            image-rendering: pixelated;
+        }
+        .retro-border {
+            border: 4px solid #4a3c31;
+            position: relative;
+            background-color: #fceabb;
+        }
+        .retro-border::after {
+            content: '';
+            position: absolute;
+            top: -4px; left: -4px; right: -4px; bottom: -4px;
+            box-shadow: inset 0 0 0 4px #e5ce96;
+            pointer-events: none;
+        }
+        .pixel-btn {
+            border: 4px solid #000;
+            position: relative;
+            image-rendering: pixelated;
+        }.dither-pattern {
+            background-image: radial-gradient(#ffffff 1px, transparent 1px);
+            background-size: 4px 4px;
+            opacity: 0.2;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-[#1a101f] font-display antialiased overflow-hidden select-none text-[#2d1b0e] dark:text-[#e0d8c3]">
+<div class="relative flex h-screen w-full flex-col items-center justify-between overflow-hidden">
+<div class="absolute inset-0 z-0 pointer-events-none bg-[#639bff] dark:bg-[#2a1d36]">
+<div class="absolute inset-0 dither-pattern mix-blend-overlay"></div>
+<div class="absolute bottom-0 w-full h-1/2 opacity-20 dark:opacity-10 pixelated-bg" style="background-image: linear-gradient(0deg, transparent 24%, #ffffff 25%, #ffffff 26%, transparent 27%, transparent 74%, #ffffff 75%, #ffffff 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, #ffffff 25%, #ffffff 26%, transparent 27%, transparent 74%, #ffffff 75%, #ffffff 76%, transparent 77%, transparent); background-size: 50px 50px;">
+</div>
+<div class="absolute inset-0 flex items-center justify-center opacity-30 dark:opacity-10">
+<svg class="w-full h-full text-[#382b47] dark:text-[#5d4037]" preserveAspectRatio="xMidYMid slice" style="shape-rendering: crispEdges;" viewBox="0 0 400 800" xmlns="http://www.w3.org/2000/svg">
+<path d="M-50,100 C150,100 200,300 100,400 S-100,600 200,700 S500,500 450,100" fill="none" opacity="0.5" stroke="currentColor" stroke-dasharray="25, 10" stroke-width="25"></path>
+</svg>
+</div>
+</div>
+<div class="z-10 flex w-full max-w-md flex-1 flex-col justify-between px-6 py-8">
+<div class="flex flex-1 flex-col items-center justify-center pt-8 pb-4">
+<div class="relative flex aspect-square w-full max-w-[280px] flex-col items-center justify-center bg-black/10 border-4 border-black dark:border-white shadow-pixel backdrop-blur-sm p-4">
+<div class="w-full h-full bg-center bg-contain bg-no-repeat drop-shadow-md pixelated-bg" data-alt="3D rendered game logo for Roller Coaster Revolution 99 Tracks" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAFeyPY39EwcDCUwCQmZt1frkXC39jJpeSkGFvB7KOMWHBQ7GFuDMWOCnBn1HE5YtPwGusTFd8fTjmCc7WhPa_sl0ZC0SICIMuEkbwISQfcOfN9Z2Zbwam95M4WzMNsdz6ZIXnfifMkN1stdmYsB_P9tCC5AxegxQ3lGROvQRNGyDyuoSf78SGN_Ttkk4JAxac5-yRjup86mpZtc_AFb2gMgzyCiEPDjas6zZsrFKo-bKkFZbQLx9nCwDI4SZIT8BqrklOj-Mz79tk"); filter: contrast(1.2);'>
+</div>
+</div>
+</div>
+<div class="flex w-full flex-col gap-4 pb-6">
+<div class="flex justify-center w-full mb-4">
+<button class="group relative flex w-full max-w-[480px] cursor-pointer items-center justify-center bg-[#ee8c2b] hover:bg-[#ff9e3d] active:translate-y-1 active:shadow-none border-4 border-black h-20 px-6 text-black shadow-pixel transition-none">
+<div class="absolute top-0 left-0 w-1 h-1 bg-white opacity-40"></div>
+<div class="absolute top-1 left-1 w-1 h-1 bg-white opacity-40"></div>
+<span class="material-symbols-outlined mr-4 text-[32px] drop-shadow-md">play_circle</span>
+<span class="text-3xl font-normal tracking-wide uppercase drop-shadow-md">Start Game</span>
+</button>
+</div>
+<div class="flex flex-col gap-4 w-full items-center">
+<button class="flex w-full max-w-[480px] cursor-pointer items-center justify-between bg-[#e6ddd0] dark:bg-[#3e3245] hover:bg-[#fff5e6] dark:hover:bg-[#4d3e56] border-4 border-black dark:border-[#1a101f] h-16 px-4 text-[#2d1b0e] dark:text-[#e0d8c3] shadow-pixel-sm active:translate-y-1 active:shadow-none transition-none">
+<div class="flex items-center gap-4">
+<div class="bg-[#ee8c2b] w-10 h-10 flex items-center justify-center border-2 border-black">
+<span class="material-symbols-outlined text-black">map</span>
+</div>
+<span class="text-2xl font-normal uppercase tracking-wide">Level Select</span>
+</div>
+<span class="material-symbols-outlined opacity-50">arrow_forward_ios</span>
+</button>
+<button class="flex w-full max-w-[480px] cursor-pointer items-center justify-between bg-[#e6ddd0] dark:bg-[#3e3245] hover:bg-[#fff5e6] dark:hover:bg-[#4d3e56] border-4 border-black dark:border-[#1a101f] h-16 px-4 text-[#2d1b0e] dark:text-[#e0d8c3] shadow-pixel-sm active:translate-y-1 active:shadow-none transition-none">
+<div class="flex items-center gap-4">
+<div class="bg-[#facc15] w-10 h-10 flex items-center justify-center border-2 border-black">
+<span class="material-symbols-outlined text-black">emoji_events</span>
+</div>
+<span class="text-2xl font-normal uppercase tracking-wide">High Scores</span>
+</div>
+<span class="material-symbols-outlined opacity-50">arrow_forward_ios</span>
+</button>
+<button class="flex w-full max-w-[480px] cursor-pointer items-center justify-between bg-[#e6ddd0] dark:bg-[#3e3245] hover:bg-[#fff5e6] dark:hover:bg-[#4d3e56] border-4 border-black dark:border-[#1a101f] h-16 px-4 text-[#2d1b0e] dark:text-[#e0d8c3] shadow-pixel-sm active:translate-y-1 active:shadow-none transition-none">
+<div class="flex items-center gap-4">
+<div class="bg-[#9ca3af] w-10 h-10 flex items-center justify-center border-2 border-black">
+<span class="material-symbols-outlined text-black">settings</span>
+</div>
+<span class="text-2xl font-normal uppercase tracking-wide">Settings</span>
+</div>
+<span class="material-symbols-outlined opacity-50">arrow_forward_ios</span>
+</button>
+</div>
+</div>
+<div class="flex flex-col items-center justify-end pb-2">
+<div class="bg-black/80 px-4 py-1 border-2 border-[#ee8c2b]">
+<p class="text-[#ee8c2b] text-base font-normal tracking-wider uppercase">v2.0 • Player: Guest</p>
+</div>
+</div>
+</div>
+</div>
+
+</body></html>
